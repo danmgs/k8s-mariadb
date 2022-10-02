@@ -1,0 +1,16 @@
+rootpwd: password
+database:
+  # New Database name
+  databasename: "test-db"
+  # Database additional user details (base64 encoded)
+  username: "db-user"
+  password: "db-user"
+  # Database storage Path
+  dataStoragePath: "/mnt/data"
+  # Database storage Size (Ex. 1Gi, 100Mi)
+  dataStorageSize: "1Gi"
+  # Port number exposed for Database service
+  port: 30685
+
+image:
+  name: "mariadb/server:10.3"

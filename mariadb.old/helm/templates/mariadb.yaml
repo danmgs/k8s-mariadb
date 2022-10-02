@@ -1,0 +1,28 @@
+apiVersion: mariadb.persistentsys/v1alpha1
+kind: MariaDB
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  # Keep this parameter value unchanged.
+  size: 1
+
+  # Root user password
+  rootpwd: {{ .Values.rootpwd }}
+
+  # New Database name
+  database: {{ .Values.database.databasename }}
+  # Database additional user details (base64 encoded)
+  username: {{ .Values.database.username }}
+  password: {{ .Values.database.password }}
+
+  # Image name with version
+  image: {{ .Values.image.name }}
+
+  # Database storage Path
+  dataStoragePath: {{ .Values.database.dataStoragePath }}
+
+  # Database storage Size (Ex. 1Gi, 100Mi)
+  dataStorageSize: {{ .Values.database.dataStorageSize }}
+
+  # Port number exposed for Database service
+  port: {{ .Values.database.port }}

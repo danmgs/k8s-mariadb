@@ -1,0 +1,6 @@
+apiVersion: v1
+appVersion: 1.0.0
+description: A Helm chart to deploy an instance from the MariaDB Operator
+name: mariadb
+type: application
+version: 1.0.0
